@@ -24,20 +24,23 @@ $(function () {
   $("#agenda")
     .children()
     .each(function (index) {
-      keys.push($(this).attr("id"));
+      var id = $(this).attr("id");
+      keys.push(id);
+      var hour = id.substr(5);
+      var hourInt = parseInt(hour);
+      var time = dayjs().hour();
+
+      if (hourInt == time) {
+        $(this).addClass("present");
+      } else if (hourInt < time) {
+        $(this).addClass("past");
+      } else $(this).addClass("future");
     });
 
   console.log(keys);
   refreshAgenda();
 
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
+  var today = dayjs();
+  $("#currentDay").text(today.format("MMM D, YYYY"));
 
-  
-  // TODO: Add code to display the current date in the header of the page.
-});
-
-$;
+  });
