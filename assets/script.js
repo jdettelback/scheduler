@@ -4,7 +4,6 @@ $(function () {
     var calendarEntry = $("#" + key);
     var calText = calendarEntry.children("textarea");
     var text = calText.val();
-    alert(text);
 
     localStorage.setItem(key, text);
   });
@@ -37,10 +36,8 @@ $(function () {
       } else $(this).addClass("future");
     });
 
-  console.log(keys);
   refreshAgenda();
 
   var today = dayjs();
-  $("#currentDay").text(today.format("MMM D, YYYY"));
-
-  });
+  $("#currentDay").text(today.format("MMMM D, YYYY"));
+});
