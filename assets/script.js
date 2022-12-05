@@ -1,4 +1,7 @@
 $(function () {
+
+  // Function to save text entered into scheduler 
+
   $(".saveBtn").click(function () {
     var key = $(this).parent().attr("id");
     var calendarEntry = $("#" + key);
@@ -7,6 +10,8 @@ $(function () {
 
     localStorage.setItem(key, text);
   });
+
+  // Function to re-add text already saved upon refresh
 
   function refreshAgenda() {
     for (var k of keys) {
@@ -18,6 +23,8 @@ $(function () {
       }
     }
   }
+
+  // Determines current time and adds correct class to time block to change background color
 
   var keys = [];
   $("#agenda")
