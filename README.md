@@ -4,3 +4,5 @@
 
 ### This scheduler is created dynamically primarily using jquery.
 
+https://raw.githubusercontent.com/jdettelback/scheduler/main/assets/schedulerscreenshot.png
+
