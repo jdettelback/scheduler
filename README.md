@@ -6,8 +6,4 @@
 
 ![screenshot](https://raw.githubusercontent.com/jdettelback/scheduler/main/assets/schedulerscreenshot.png)
 
-<<<<<<< HEAD
-
-=======
 https://jdettelback.github.io/scheduler/
->>>>>>> cb2bb8b33adf4388882c1b3e9f90c00a69000041
